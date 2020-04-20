@@ -1,0 +1,4 @@
+{
+    "jwtPrivateKey": "vidly_jwtPrivateKey",
+    "db": "mongodb+srv://dumbSkull:<password>@vidly-iodxc.gcp.mongodb.net/test?retryWrites=true&w=majority"
+}
