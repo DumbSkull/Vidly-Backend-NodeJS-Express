@@ -30,12 +30,18 @@ function asyncMiddlewear (handler){
     }
 }
 
-router.get('/', asyncMiddlewear(async (req, res)=>{
+router.get('/', async (req, res)=>{
+    console.log('get called');
+    try{
     const genres = await Genre.find()
-                             .select('name id');
+    .select('name id');
     res.send(genres);
-}))
-
+    }
+    catch(err){
+        console.log(err.message);
+    }
+})
+;
 //get specific genre by id
 router.get('/:id',  async (req, res)=>{
     const genres = await Genre.find()
